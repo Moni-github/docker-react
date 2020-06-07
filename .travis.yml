@@ -5,8 +5,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t 7262083407/docker-react -f Dockerfile.dev .
+  - docker build -t monicabanasure-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true 7262083407/docker-react -and npm run test
+  - docker run -e CI=true monicabanasure/docker-react npm run test
 
